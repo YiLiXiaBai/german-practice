@@ -1089,7 +1089,7 @@ function findVoice()
   const changed = !!pick !== !!deVoice;
   deVoice = pick;
   document.documentElement.classList.toggle('can-speak', !!deVoice);
-  if (changed && !$('#home').hidden) renderSetup();
+  if (changed) setTimeout(() => { if (!$('#home').hidden) renderSetup(); });
 }
 function speak(text, btn)
 {
