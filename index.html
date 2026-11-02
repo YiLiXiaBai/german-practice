@@ -58,8 +58,8 @@ p{margin:0}
 .daystreak svg{width:16px;height:16px;color:var(--red)}
 
 /* tabs */
-.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;background:var(--sunk);border-radius:12px;margin-bottom:18px}
-.tabs button{border:0;background:transparent;padding:9px 6px;border-radius:9px;font-weight:700;color:var(--muted)}
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;padding:4px;background:var(--sunk);border-radius:12px;margin-bottom:18px}
+.tabs button{border:0;background:transparent;padding:9px 4px;border-radius:9px;font-weight:700;color:var(--muted);font-size:15px;min-width:0}
 .tabs button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgb(0 0 0 / .12)}
 
 .stack{display:flex;flex-direction:column;gap:20px}
@@ -259,6 +259,60 @@ dialog::backdrop{background:rgb(0 0 0 / .45)}
 .spk.big svg{width:38px;height:38px}
 .afield .spk{width:36px;height:36px}
 .afield .spk svg{width:17px;height:17px}
+/* learn */
+.learn-intro{display:flex;flex-direction:column;gap:8px}
+.learn-intro h2{font-size:24px;line-height:1.15}
+.learn-intro p{color:var(--muted);font-size:15px}
+.learn-stats{display:flex;gap:8px;flex-wrap:wrap}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px;color:var(--muted)}
+.pill b{color:var(--ink);font-variant-numeric:tabular-nums}
+.fams{display:flex;flex-direction:column;gap:8px}
+.fam{display:grid;grid-template-columns:28px minmax(0,1fr);gap:2px 10px;text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;width:100%}
+.fam.is-next{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.fam-n{grid-row:span 3;font-family:var(--mono);font-weight:700;color:var(--muted);font-size:14px;padding-top:3px}
+.fam b{font-family:var(--display);font-size:18px;line-height:1.2}
+.fam .mono{font-size:14px;color:var(--muted);overflow-wrap:anywhere}
+.fam-foot{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:4px}
+.fam-dots{display:flex;gap:3px;flex-wrap:wrap}
+.fam-dots i{width:14px;height:6px;border-radius:3px;background:var(--sunk)}
+.fam-dots i.on{background:var(--good)}
+.fam-dots i.due{background:var(--gold)}
+.back{align-self:flex-start}
+.lesson-head{display:flex;flex-direction:column;gap:4px}
+.lesson-head h2{font-size:30px;line-height:1.1}
+.model{font-family:var(--mono);font-size:16px}
+.tipbox{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:12px;padding:12px 14px;font-size:15px}
+.ltable{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.lrow{background:var(--card);padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.lrow-head{display:flex;align-items:center;gap:10px}
+.lrow-head b{font-size:17px}
+.lrow-head .mean{flex:1;min-width:0;font-size:14px;color:var(--muted)}
+.lforms{display:flex;flex-wrap:wrap;gap:2px 14px;font-family:var(--mono);font-size:15px}
+.lforms>span{color:var(--tc)}
+mark{background:color-mix(in srgb,var(--gold) 32%,transparent);color:inherit;border-radius:3px;padding:0 1px;font-weight:700}
+.aux{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.fcard{border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px;min-height:330px;cursor:pointer}
+.fcard.flip{animation:flip .26s ease-out}
+.fc-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.fam-badge{font-size:12px;font-weight:700;border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:3px 10px;color:var(--muted)}
+.fc-front{flex:1;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.fc-hint{font-size:15px;color:var(--muted)}
+.fc-hint i{font-style:normal;font-family:var(--mono)}
+.fc-inf{font-size:28px}
+.fc-mean{font-size:17px;font-weight:700}
+.fc-rows{display:flex;flex-direction:column;gap:8px}
+.fc-row{border-left:4px solid var(--tc);padding:2px 10px;display:flex;flex-direction:column;background:var(--card)}
+.fc-row small{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--tc)}
+.fc-row span{font-family:var(--mono);font-size:19px}
+.fc-row span i{font-style:normal;color:var(--muted)}
+.fc-ex{display:flex;flex-direction:column;gap:4px;background:var(--sunk);border-radius:12px;padding:10px 12px;font-size:15px}
+.fc-ex b{color:var(--tc)}
+.fc-done{flex:1;display:flex;flex-direction:column;justify-content:center;gap:10px;text-align:center}
+.fc-done h2{font-size:30px}
+.fc-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.btn-no{border:2px solid var(--bad);background:var(--card);color:var(--bad);font-weight:700;font-size:17px;border-radius:14px;padding:15px 8px}
+.btn-yes{border:2px solid var(--good);background:var(--good);color:var(--on-ink);font-weight:700;font-size:17px;border-radius:14px;padding:15px 8px}
+#flipBtn{margin-top:12px}
 html:not(.can-speak) .spk,html:not(.can-speak) .hearbtn{display:none!important}
 #confetti{position:fixed;inset:0;pointer-events:none;z-index:15;width:100%;height:100%}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
@@ -279,12 +333,26 @@ html:not(.can-speak) .spk,html:not(.can-speak) .hearbtn{display:none!important}
   <!-- HOME -->
   <section id="home">
     <nav class="tabs" role="tablist">
-      <button type="button" role="tab" data-tab="play" aria-selected="true">Play</button>
+      <button type="button" role="tab" data-tab="learn" aria-selected="true">Learn</button>
+      <button type="button" role="tab" data-tab="play" aria-selected="false">Play</button>
       <button type="button" role="tab" data-tab="prog" aria-selected="false">Progress</button>
       <button type="button" role="tab" data-tab="list" aria-selected="false">Verb list</button>
     </nav>
 
-    <div id="tab-play" class="stack">
+    <div id="tab-learn" class="stack">
+      <div class="learn-intro">
+        <h2>Learn the verbs in families</h2>
+        <p>Verbs in the same family change their vowels in the same way, so they are easier to learn together. Open a family, read the rule, go through the flashcards, then test yourself.</p>
+        <div class="learn-stats" id="learnStats"></div>
+      </div>
+      <button class="btn-primary" id="reviewBtn" type="button" hidden>Review today's cards</button>
+      <div class="group">
+        <span class="label">Families · start at the top and go down</span>
+        <div class="fams" id="fams"></div>
+      </div>
+    </div>
+
+    <div id="tab-play" class="stack" hidden>
       <details class="howto" id="howto">
         <summary><span>How to play</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
         <div class="howto-body">
@@ -373,6 +441,37 @@ html:not(.can-speak) .spk,html:not(.can-speak) .hearbtn{display:none!important}
 
   <!-- RESULT -->
   <section id="result" class="stack" hidden></section>
+
+  <!-- LESSON: one verb family -->
+  <section id="lesson" class="stack" hidden>
+    <button class="icon-btn back" id="lessonBack" type="button">← All families</button>
+    <div class="lesson-head" id="lessonHead"></div>
+    <p class="tipbox" id="lessonTip"></p>
+    <div class="ltable" id="lessonTable"></div>
+    <p class="note">Highlighted: the vowel that changes. Underlined: the helper verb for the Perfekt.</p>
+    <button class="btn-primary" id="lessonCards" type="button">Learn them with flashcards</button>
+    <button class="btn-ghost" id="lessonTest" type="button">Test me on these</button>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section id="cards" hidden>
+    <div class="hud">
+      <button class="icon-btn" id="cardsEnd" type="button">End</button>
+      <div class="hud-mid"><div class="bar"><i id="cBar"></i></div><span class="mono" id="cCount"></span></div>
+    </div>
+    <p class="streak" id="cNote">Not yet: the card comes back in a moment. I knew it: done for today.</p>
+    <article class="fcard paper" id="fcard" aria-live="polite"></article>
+    <button class="btn-primary" id="flipBtn" type="button">Turn the card over</button>
+    <div class="fc-actions" id="fcActions" hidden>
+      <button class="btn-no" id="cNo" type="button">Not yet</button>
+      <button class="btn-yes" id="cYes" type="button">I knew it</button>
+    </div>
+    <div class="stack" id="cardsDone" hidden style="margin-top:12px;gap:10px">
+      <button class="btn-primary" id="cTest" type="button">Test me on these</button>
+      <button class="btn-ghost" id="cAgain" type="button">Go through them again</button>
+      <button class="btn-ghost" id="cBack" type="button">Back to Learn</button>
+    </div>
+  </section>
 </div>
 
 <dialog id="dlg"></dialog>
@@ -983,11 +1082,311 @@ function buildOptions(v, parts)
   return o;
 }
 
+/* ---------- Learn: verb families, example sentences, flashcards ---------- */
+const FAMILIES = [
+  { name: 'The big three', model: 'sein · war · ist gewesen', tip: 'The three most important verbs, and completely irregular, so learn them by heart. sein and werden take ist in the Perfekt, haben takes hat.', verbs: ['sein', 'haben', 'werden'] },
+  { name: 'Modal verbs', model: 'können · konnte · hat gekonnt', tip: 'No -t in the er-form (er kann, er muss, er will) and no umlaut in the Präteritum (konnte, musste, durfte). The Perfekt always takes hat.', verbs: ['können', 'müssen', 'dürfen', 'wollen', 'sollen', 'mögen'] },
+  { name: 'ei → ie → ie', model: 'bleiben · blieb · ist geblieben', tip: 'The ei turns into ie, both in the Präteritum and in the Partizip. Careful: ie, not ei! bleiben, einsteigen and umsteigen take ist.', verbs: ['bleiben', 'schreiben', 'beschreiben', 'unterschreiben', 'scheinen', 'leihen', 'einsteigen', 'umsteigen', 'überweisen'] },
+  { name: 'ei → i → i', model: 'schneiden · schnitt · hat geschnitten', tip: 'The ei turns into a short i, and the consonant after it often doubles: reiten, ritt, geritten. reiten takes ist.', verbs: ['schneiden', 'reiten', 'sich streiten', 'vergleichen'] },
+  { name: 'ie → o → o', model: 'fliegen · flog · ist geflogen', tip: 'The ie (in lügen, the ü) turns into o, both in the Präteritum and in the Partizip. In ziehen the h becomes g: zog, gezogen. fliegen, einziehen and umziehen take ist.', verbs: ['fliegen', 'verlieren', 'ziehen', 'einziehen', 'umziehen', 'riechen', 'schliessen', 'anbieten', 'verbieten', 'verschieben', 'lügen'] },
+  { name: 'i → a → u / o', model: 'finden · fand · hat gefunden', tip: 'The i turns into a in the Präteritum. In the Partizip it becomes u (finden, trinken) or o (beginnen, gewinnen, schwimmen). schwimmen takes ist.', verbs: ['finden', 'stattfinden', 'trinken', 'beginnen', 'gewinnen', 'schwimmen'] },
+  { name: 'e → a → o', model: 'helfen · half · hat geholfen', tip: 'In the er-form the e turns into i or ie (er hilft, er nimmt, er empfiehlt). Präteritum with a, Partizip with o. sterben takes ist.', verbs: ['helfen', 'sprechen', 'aussprechen', 'nehmen', 'teilnehmen', 'unternehmen', 'treffen', 'sterben', 'empfehlen', 'sich bewerben'] },
+  { name: 'e → a → e', model: 'geben · gab · hat gegeben', tip: 'In the er-form the e turns into i or ie (er gibt, er sieht, er liest). Präteritum with a, and the Partizip goes back to e. bitten and liegen also have a, then e.', verbs: ['geben', 'abgeben', 'ausgeben', 'sehen', 'ansehen', 'aussehen', 'fernsehen', 'lesen', 'essen', 'vergessen', 'bitten', 'liegen'] },
+  { name: 'a → u → a', model: 'fahren · fuhr · ist gefahren', tip: 'In the er-form the a gets an umlaut (er fährt, er trägt). Präteritum with u, and the Partizip goes back to a. fahren takes ist.', verbs: ['fahren', 'tragen', 'eintragen', 'einladen', 'waschen'] },
+  { name: 'a → ie → a', model: 'schlafen · schlief · hat geschlafen', tip: 'In the er-form the a gets an umlaut (er schläft, er hält). Präteritum with ie, and the Partizip goes back to a. fallen takes ist.', verbs: ['schlafen', 'fallen', 'gefallen', 'halten', 'unterhalten', 'lassen', 'raten', 'beraten', 'braten'] },
+  { name: '… → ie → …', model: 'rufen · rief · hat gerufen', tip: 'The Präteritum gets ie, but the Partizip keeps the vowel of the infinitive: rufen, rief, gerufen; laufen, lief, gelaufen. laufen takes ist.', verbs: ['rufen', 'anrufen', 'laufen', 'heissen'] },
+  { name: '… → i → a', model: 'gehen · ging · ist gegangen', tip: 'The Präteritum gets i and the Partizip gets a: gehen, ging, gegangen; anfangen, fing an, angefangen. gehen, ausgehen and spazieren gehen take ist.', verbs: ['gehen', 'ausgehen', 'spazieren gehen', 'anfangen', 'hängen'] },
+  { name: 'kommen', model: 'kommen · kam · ist gekommen', tip: 'Präteritum with a, and the Partizip goes back to o. kommen and ankommen take ist, bekommen takes hat. And bekommen means to get, not to become!', verbs: ['kommen', 'ankommen', 'bekommen'] },
+  { name: '… → a → a', model: 'stehen · stand · hat gestanden', tip: 'The Präteritum and the Partizip both have a: stehen, stand, gestanden; tun, tat, getan. aufstehen takes ist.', verbs: ['stehen', 'aufstehen', 'bestehen', 'verstehen', 'tun', 'wehtun'] },
+  { name: 'Mixed verbs', model: 'bringen · brachte · hat gebracht', tip: 'These change their vowel but still add -te and -t like regular verbs: bringen, brachte, gebracht; denken, dachte, gedacht. backen is the other way round: backte, but gebacken.', verbs: ['bringen', 'denken', 'kennen', 'nennen', 'wissen', 'backen'] }
+];
+/* Example sentence per verb: infinitive | subject | the rest of the sentence. */
+const EXAMPLES = `abgeben|Lena|die Hausaufgaben
+anbieten|Der Kellner|uns Wasser
+anfangen|Die Schule|um acht Uhr
+ankommen|Der Zug|pünktlich in Sion
+anrufen|Sie|ihre Oma
+ansehen|Er|das Foto
+aufstehen|Sie|um sechs Uhr
+ausgeben|Er|viel Geld
+ausgehen|Sie|am Samstag
+aussehen|Er|müde
+aussprechen|Sie|das Wort richtig
+backen|Papa|einen Kuchen
+beginnen|Der Film|um acht Uhr
+bekommen|Sie|einen Brief
+beraten|Die Lehrerin|die Klasse
+beschreiben|Er|sein Zimmer
+bestehen|Sie|die Prüfung
+sich bewerben|Er|um eine Lehrstelle
+bitten|Sie|den Lehrer um Hilfe
+bleiben|Er|zu Hause
+braten|Mama|ein Ei
+bringen|Er|mir ein Glas Wasser
+denken|Sie|oft an ihre Freundin
+dürfen|Er|das nicht
+einladen|Sie|ihre Freunde zum Geburtstag
+einsteigen|Er|in den Bus
+eintragen|Sie|ihren Namen in die Liste
+einziehen|Die Familie|in das neue Haus
+empfehlen|Die Lehrerin|uns ein Buch
+essen|Er|einen Apfel
+fahren|Sie|mit dem Zug nach Zürich
+fallen|Das Glas|auf den Boden
+fernsehen|Er|am Abend
+finden|Sie|ihren Schlüssel
+fliegen|Das Flugzeug|nach London
+geben|Er|mir das Buch
+gefallen|Der Film|mir
+gehen|Sie|in die Schule
+gewinnen|Sie|das Rennen
+haben|Er|einen Hund
+halten|Der Bus|vor der Schule
+hängen|Das Bild|an der Wand
+heissen|Sie|Anna
+helfen|Er|seiner Mutter
+kennen|Sie|den Weg
+kommen|Er|zu spät
+können|Sie|gut Deutsch
+lassen|Er|sein Handy zu Hause
+laufen|Sie|jeden Morgen fünf Kilometer
+leihen|Er|mir sein Velo
+lesen|Sie|ein spannendes Buch
+liegen|Die Katze|auf dem Sofa
+lügen|Er|nie
+mögen|Sie|Schokolade
+müssen|Er|nach Hause
+nehmen|Sie|den Bus
+nennen|Man|ihn Max
+raten|Sie|die richtige Antwort
+reiten|Sie|auf einem Pferd
+riechen|Die Suppe|gut
+rufen|Er|den Hund
+scheinen|Die Sonne|den ganzen Tag
+schlafen|Das Baby|zehn Stunden
+schliessen|Sie|die Tür
+schneiden|Er|das Brot
+schreiben|Sie|eine Nachricht
+schwimmen|Er|im See
+sehen|Sie|einen Vogel
+sein|Er|müde
+sollen|Er|das nicht
+spazieren gehen|Sie|mit dem Hund
+sprechen|Er|drei Sprachen
+stattfinden|Das Konzert|am Freitag
+stehen|Er|an der Bushaltestelle
+sterben|Die Pflanze|ohne Wasser
+sich streiten|Er|mit seiner Schwester
+teilnehmen|Sie|an einem Wettbewerb
+tragen|Er|eine schwere Tasche
+treffen|Sie|ihre Freundin im Café
+trinken|Er|ein Glas Milch
+tun|Sie|ihr Bestes
+überweisen|Er|das Geld auf mein Konto
+umsteigen|Sie|in Lausanne
+umziehen|Die Familie|nach Genf
+unterhalten|Der Clown|die Kinder
+unternehmen|Sie|am Wochenende viel
+unterschreiben|Er|den Vertrag
+verbieten|Die Mutter|das Handy beim Essen
+vergessen|Er|seine Hausaufgaben
+vergleichen|Sie|die Preise
+verlieren|Er|seinen Schlüssel
+verschieben|Der Lehrer|die Prüfung
+verstehen|Sie|die Frage
+waschen|Er|sein Auto
+wehtun|Mein Kopf|
+werden|Er|Arzt
+wissen|Sie|die Antwort
+wollen|Er|ein Eis
+ziehen|Er|an der Tür`;
+const EX = new Map(EXAMPLES.trim().split('\n').map(l =>
+{
+  const [inf, s, m = ''] = l.split('|');
+  return [inf, { s, m: m.trim() }];
+}));
+FAMILIES.forEach((f, i) =>
+{
+  f.i = i;
+  f.nums = f.verbs.map(inf => BY_INF.get(inf).n);
+  f.nums.forEach(n => { V[n - 1].fam = i; });
+});
+function exampleHTML(v, t)
+{
+  const e = EX.get(v.inf);
+  if (!e) return '';
+  const mid = e.m ? ' ' + esc(e.m) : '', refl = isRefl(v) ? ' sich' : '';
+  const f = answers(v, t)[0], i = f.indexOf(' ');
+  if (t < 2)
+  {
+    const head = i < 0 ? f : f.slice(0, i), tail = i < 0 ? '' : f.slice(i + 1);
+    return `${esc(e.s)} <b>${esc(head)}</b>${refl}${mid}${tail ? ' <b>' + esc(tail) + '</b>' : ''}.`;
+  }
+  return `${esc(e.s)} <b>${esc(f.slice(0, i))}</b>${refl}${mid} <b>${esc(f.slice(i + 1))}</b>.`;
+}
+const exampleText = (v, t) => exampleHTML(v, t).replace(/<[^>]+>/g, '').replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+const INSEP = ['unter', 'über', 'emp', 'ent', 'ver', 'zer', 'be', 'er', 'ge'];
+function skipPrefix(word, from)
+{
+  for (const p of INSEP)
+  {
+    if (word.startsWith(p, from) && word.length - from - p.length >= 4) return from + p.length;
+  }
+  return from;
+}
+function infVowel(v)
+{
+  const sep = sepOf(v), b = sep ? sep.base : v.inf.replace(/^sich /, '');
+  const m = b.slice(skipPrefix(b, 0)).match(/ie|ei|au|äu|eu|[aeiouäöü]/);
+  return m ? m[0] : '';
+}
+function markWord(word, vowel, from)
+{
+  let i = vowel ? word.indexOf(vowel, from) : -1;
+  if (i < 0 && vowel) i = word.indexOf(vowel);
+  if (i < 0) return esc(word);
+  return esc(word.slice(0, i)) + '<mark>' + esc(vowel) + '</mark>' + esc(word.slice(i + vowel.length));
+}
+/* The main form of a tense as HTML: the changing vowel highlighted, the helper verb underlined. */
+function formHTML(v, t)
+{
+  const w = answers(v, t)[0].split(' ');
+  const plain = /modal|irr/.test(v.pat);
+  const [pv, ppv, prv] = v.pat.split('/');
+  if (t < 2)
+  {
+    const vowel = plain ? '' : t === 0 ? (prv === '-' ? infVowel(v) : prv) : pv;
+    return markWord(w[0], vowel, skipPrefix(w[0], 0)) + (isRefl(v) ? ' sich' : '') + (w.length > 1 ? ' ' + esc(w.slice(1).join(' ')) : '');
+  }
+  const rest = w.slice(1), last = rest[rest.length - 1], sep = sepOf(v);
+  let from = 0;
+  if (sep && !sep.space && last.startsWith(sep.part)) from = sep.part.length;
+  if (last.startsWith('ge', from)) from += 2;
+  else from = skipPrefix(last, from);
+  const lastHTML = markWord(last, plain ? '' : ppv, from);
+  return `<span class="aux">${esc(w[0])}</span>${isRefl(v) ? ' sich' : ''} ` + rest.slice(0, -1).map(x => esc(x) + ' ').join('') + lastHTML;
+}
+const DAYS = [0, 1, 2, 4, 7, 14];
+function dayNum()
+{
+  const d = new Date();
+  return Math.round(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 864e5);
+}
+const isDue = n => !!S.learn[n] && S.learn[n].due <= dayNum();
+function renderLearn()
+{
+  const learned = V.filter(v => S.learn[v.n]).length;
+  const due = V.filter(v => isDue(v.n));
+  $('#learnStats').innerHTML = `<span class="pill"><b>${learned}</b> of 99 learned</span><span class="pill"><b>${due.length}</b> to review today</span>`;
+  const rb = $('#reviewBtn');
+  rb.hidden = !due.length;
+  rb.textContent = `Review today's cards (${Math.min(due.length, 15)})`;
+  const next = FAMILIES.findIndex(f => f.nums.some(n => !S.learn[n]));
+  $('#fams').innerHTML = FAMILIES.map(f =>
+  {
+    const done = f.nums.filter(n => S.learn[n]).length;
+    const dots = f.nums.map(n => `<i class="${isDue(n) ? 'due' : S.learn[n] ? 'on' : ''}"></i>`).join('');
+    return `<button class="fam${f.i === next ? ' is-next' : ''}" type="button" data-fam="${f.i}"><span class="fam-n">${f.i + 1}</span><b>${esc(f.name)}</b><span class="mono" lang="de">${esc(f.model)}</span><span class="fam-foot"><span class="fam-dots" aria-hidden="true">${dots}</span><span>${f.i === next ? 'Next · ' : ''}${done}/${f.nums.length} learned</span></span></button>`;
+  }).join('');
+}
+let LESSON = 0;
+function openLesson(i)
+{
+  const f = FAMILIES[i];
+  LESSON = i;
+  show('lesson');
+  $('#lessonHead').innerHTML = `<span class="label">Family ${i + 1} of ${FAMILIES.length} · ${f.nums.length} verbs</span><h2>${esc(f.name)}</h2><p class="model" lang="de">${esc(f.model)}</p>`;
+  $('#lessonTip').textContent = f.tip;
+  $('#lessonTable').innerHTML = f.nums.map(n =>
+  {
+    const v = V[n - 1];
+    return `<div class="lrow"><div class="lrow-head"><b lang="de">${esc(v.inf)}</b><span class="mean">${esc(shortMeaning(v))}</span><button class="spk" type="button" data-say="${esc(sayAll(v))}" aria-label="Hear ${esc(v.inf)}">${ICON.spk}</button></div><div class="lforms" lang="de">${[0, 1, 2].map(t => `<span class="tc${t}">${formHTML(v, t)}</span>`).join('')}</div></div>`;
+  }).join('');
+}
+let C = null;
+function startCards(nums, kind, fam)
+{
+  if (!nums || !nums.length) return;
+  C = { kind, fam, nums: nums.slice(), queue: shuffle(nums.slice()), done: 0, missed: new Set(), flipped: false };
+  show('cards');
+  unlockAudio();
+  renderFlash(true);
+}
+function renderFlash(anim)
+{
+  const total = C.nums.length, card = $('#fcard'), finished = !C.queue.length;
+  $('#cBar').style.width = (C.done / total * 100) + '%';
+  $('#cCount').textContent = `${C.done}/${total}`;
+  $('#cardsDone').hidden = !finished;
+  $('#flipBtn').hidden = finished || C.flipped;
+  $('#fcActions').hidden = finished || !C.flipped;
+  $('#cNote').hidden = finished;
+  if (finished)
+  {
+    const again = C.missed.size;
+    card.innerHTML = `<div class="fc-done"><h2>${C.kind === 'review' ? 'Review done!' : 'Gut gemacht!'}</h2><p>You went through ${total} verb${total === 1 ? '' : 's'}${again ? `. ${again} needed a second look` : ' and knew them all the first time'}.</p><p class="fc-hint">${C.kind === 'review' ? 'These cards come back in a few days, so you keep them.' : 'Now test yourself on them. The cards come back for a review tomorrow.'}</p></div>`;
+  }
+  else
+  {
+    const v = V[C.queue[0] - 1], f = FAMILIES[v.fam];
+    const top = `<div class="fc-top"><span class="q-num">Nr. ${v.n}</span><span class="fam-badge">${esc(f.name)}</span></div>`;
+    if (!C.flipped)
+    {
+      card.innerHTML = top + `<div class="fc-front"><div class="q-row"><h2 class="q-inf" lang="de">${esc(v.inf)}</h2><button class="spk" type="button" data-say="${esc(v.inf)}" aria-label="Hear the verb">${ICON.spk}</button></div><p class="fc-hint">Say what it means and its three forms out loud: <i lang="de">er …, er …, er hat/ist …</i> Then turn the card over.</p></div>`;
+    }
+    else
+    {
+      const say = sayAll(v) + ' ' + [0, 1, 2].map(t => exampleText(v, t)).join(' ');
+      card.innerHTML = top + `<div class="q-row"><h3 class="fc-inf" lang="de">${esc(v.inf)}</h3><button class="spk" type="button" data-say="${esc(say)}" aria-label="Hear the forms and examples">${ICON.spk}</button></div><p class="fc-mean">${esc(meaningText(v))}</p><div class="fc-rows" lang="de">${[0, 1, 2].map(t => `<div class="fc-row tc${t}"><small>${T[t]}</small><span><i>er</i> ${formHTML(v, t)}</span></div>`).join('')}</div><div class="fc-ex" lang="de">${[0, 1, 2].map(t => `<p class="tc${t}">${exampleHTML(v, t)}</p>`).join('')}</div>`;
+    }
+  }
+  if (anim)
+  {
+    card.classList.remove('flip');
+    void card.offsetWidth;
+    card.classList.add('flip');
+  }
+}
+function flipCard()
+{
+  if (!C || C.flipped || !C.queue.length) return;
+  C.flipped = true;
+  renderFlash(true);
+}
+function rateCard(knew)
+{
+  if (!C || !C.flipped || !C.queue.length) return;
+  const n = C.queue.shift();
+  if (knew)
+  {
+    C.done++;
+    const l = S.learn[n] || { box: 0, due: 0 };
+    l.box = C.missed.has(n) ? 1 : Math.min(5, l.box + 1);
+    l.due = dayNum() + DAYS[l.box];
+    S.learn[n] = l;
+    save();
+  }
+  else
+  {
+    C.missed.add(n);
+    C.queue.splice(Math.min(3, C.queue.length), 0, n);
+  }
+  C.flipped = false;
+  renderFlash(true);
+}
+function leaveCards()
+{
+  C = null;
+  try { speechSynthesis.cancel(); } catch (e) {}
+  show('home');
+  selectTab('learn');
+}
+
 /* ---------- Storage (per browser) ---------- */
 const KEY = 'verben99.v2';
 function fresh()
 {
-  return { xp: 0, best: { round: 0, blitz: 0, survival: 0 }, box: {}, stats: { ok: 0, total: 0 }, seen: {}, badges: [], day: { last: '', n: 0 }, games: 0, set: { mode: 'round', parts: [0, 1, 2, 3], range: 'all', input: 'type', speak: true } };
+  return { xp: 0, best: { round: 0, blitz: 0, survival: 0 }, box: {}, stats: { ok: 0, total: 0 }, seen: {}, badges: [], day: { last: '', n: 0 }, games: 0, learn: {}, tab: 'learn', set: { mode: 'round', parts: [0, 1, 2, 3], range: 'all', input: 'type', speak: true } };
 }
 function load()
 {
@@ -1000,6 +1399,7 @@ function load()
       const o = JSON.parse(r);
       const s = Object.assign(d, o, { best: Object.assign(d.best, o.best || {}), set: Object.assign(d.set, o.set || {}), stats: Object.assign(d.stats, o.stats || {}), day: Object.assign(d.day, o.day || {}) });
       if (!Array.isArray(s.set.parts) || !s.set.parts.length) s.set.parts = [0, 1, 2, 3];
+      if (!s.learn || typeof s.learn !== 'object') s.learn = {};
       return s;
     }
   }
@@ -1062,8 +1462,8 @@ function toast(msg)
 }
 function show(id)
 {
-  ['home', 'game', 'result'].forEach(x => { $('#' + x).hidden = x !== id; });
-  $('#top').hidden = id === 'game';
+  ['home', 'game', 'result', 'lesson', 'cards'].forEach(x => { $('#' + x).hidden = x !== id; });
+  $('#top').hidden = id === 'game' || id === 'cards';
   window.scrollTo(0, 0);
 }
 const ICON = {
@@ -1244,14 +1644,25 @@ $('#tab-play').addEventListener('click', e =>
   renderSetup();
   $('#howto').open = open;
 });
+const TABS = ['learn', 'play', 'prog', 'list'];
+function selectTab(name)
+{
+  if (!TABS.includes(name)) name = 'learn';
+  document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', x.dataset.tab === name));
+  TABS.forEach(k => { $('#tab-' + k).hidden = k !== name; });
+  if (name === 'learn') renderLearn();
+  if (name === 'prog') renderProgress();
+  if (name === 'list') renderList();
+  if (S.tab !== name)
+  {
+    S.tab = name;
+    save();
+  }
+}
 document.querySelector('.tabs').addEventListener('click', e =>
 {
   const b = e.target.closest('[data-tab]');
-  if (!b) return;
-  document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', x === b));
-  ['play', 'prog', 'list'].forEach(k => { $('#tab-' + k).hidden = k !== b.dataset.tab; });
-  if (b.dataset.tab === 'prog') renderProgress();
-  if (b.dataset.tab === 'list') renderList();
+  if (b) selectTab(b.dataset.tab);
 });
 
 /* ---------- Game ---------- */
@@ -1687,7 +2098,8 @@ function finish()
       </div>
     </div>
     ${missU.length ? `<div class="group"><span class="label">To review (${missU.length} verb${missU.length === 1 ? '' : 's'})</span><div class="mist">${missU.map(missHTML).join('')}</div></div>
-    <button class="btn-primary" id="practiceBtn" type="button">${missU.length === 1 ? 'Practise this verb again' : `Practise these ${missU.length} verbs again`}</button>` : ''}
+    <button class="btn-primary" id="practiceBtn" type="button">${missU.length === 1 ? 'Practise this verb again' : `Practise these ${missU.length} verbs again`}</button>
+    <button class="btn-ghost" id="flashBtn" type="button">Learn ${missU.length === 1 ? 'it' : 'them'} with flashcards</button>` : ''}
     <button class="${missU.length ? 'btn-ghost' : 'btn-primary'}" id="againBtn" type="button">Play again</button>
     <button class="btn-ghost" id="homeBtn" type="button">Back to menu</button>`;
   show('result');
@@ -1697,7 +2109,11 @@ function finish()
     renderSetup();
     show('home');
   };
-  if (missU.length) $('#practiceBtn').onclick = () => start(G.miss);
+  if (missU.length)
+  {
+    $('#practiceBtn').onclick = () => start(G.miss);
+    $('#flashBtn').onclick = () => startCards(G.miss, 'mistakes', null);
+  }
   if (n >= 8 && acc >= 80) confetti();
 }
 function missHTML(r)
@@ -1761,9 +2177,10 @@ function renderProgress()
       return;
     }
     clearTimeout(t);
-    const set = S.set;
+    const set = S.set, tab = S.tab;
     S = fresh();
     S.set = set;
+    S.tab = tab;
     save();
     renderHeader();
     renderProgress();
@@ -1780,6 +2197,8 @@ function openVerb(v)
     <div class="tm"><small>Meaning</small><p class="mean">${esc(meaningText(v))}</p>${dots(0)}</div>
     ${T.map((x, i) => `<div class="tc${i}"><small>${x}</small><div class="frow"><p lang="de">${esc(allForms(v, i).join(' / '))}</p><button class="spk" type="button" data-say="er ${esc(shownForm(v, i))}" aria-label="Hear the ${x} form">${ICON.spk}</button></div>${dots(i + 1)}</div>`).join('')}
   </div>
+  <div class="fc-ex" lang="de" style="margin-top:14px">${[0, 1, 2].map(t => `<p class="tc${t}">${exampleHTML(v, t)}</p>`).join('')}</div>
+  <p class="note" style="margin-top:10px">Family: <b>${esc(FAMILIES[v.fam].name)}</b> (${esc(FAMILIES[v.fam].model)})</p>
   <div class="pattern" style="margin-top:14px">${patternHTML(v)}</div>`;
   d.querySelector('#dlgX').onclick = () => d.close();
   d.onclick = e => { if (e.target === d) d.close(); };
@@ -1831,11 +2250,58 @@ function confetti()
 
 $('#startBtn').addEventListener('click', () => start());
 
+/* ---------- Learn: events ---------- */
+$('#fams').addEventListener('click', e =>
+{
+  const b = e.target.closest('[data-fam]');
+  if (b) openLesson(+b.dataset.fam);
+});
+$('#reviewBtn').addEventListener('click', () =>
+{
+  const due = V.filter(v => isDue(v.n)).sort((a, b) => S.learn[a.n].due - S.learn[b.n].due).slice(0, 15).map(v => v.n);
+  startCards(due, 'review', null);
+});
+$('#lessonBack').addEventListener('click', () =>
+{
+  show('home');
+  selectTab('learn');
+});
+$('#lessonCards').addEventListener('click', () => startCards(FAMILIES[LESSON].nums, 'family', LESSON));
+$('#lessonTest').addEventListener('click', () => start(FAMILIES[LESSON].nums));
+$('#fcard').addEventListener('click', e =>
+{
+  if (!e.target.closest('[data-say]')) flipCard();
+});
+$('#flipBtn').addEventListener('click', flipCard);
+$('#cNo').addEventListener('click', () => rateCard(false));
+$('#cYes').addEventListener('click', () => rateCard(true));
+$('#cardsEnd').addEventListener('click', leaveCards);
+$('#cBack').addEventListener('click', leaveCards);
+$('#cAgain').addEventListener('click', () => { if (C) startCards(C.nums, C.kind, C.fam); });
+$('#cTest').addEventListener('click', () => { if (C) start(C.nums); });
+document.addEventListener('keydown', e =>
+{
+  if ($('#cards').hidden || !C || e.isComposing) return;
+  if (e.target.tagName === 'BUTTON' && (e.key === 'Enter' || e.key === ' ')) return;
+  if (!C.flipped && (e.key === ' ' || e.key === 'Enter'))
+  {
+    e.preventDefault();
+    flipCard();
+  }
+  else if (C.flipped && (e.key === '1' || e.key === 'ArrowLeft')) rateCard(false);
+  else if (C.flipped && (e.key === '2' || e.key === 'ArrowRight' || e.key === 'Enter'))
+  {
+    e.preventDefault();
+    rateCard(true);
+  }
+});
+
 /* ---------- Boot (keeps a running game when the page is updated while open) ---------- */
 function boot(data)
 {
   renderHeader();
   renderSetup();
+  selectTab(S.tab || 'learn');
   const g = data && data.G;
   if (g && !g.over && g.cur)
   {
